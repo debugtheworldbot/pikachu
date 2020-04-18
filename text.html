@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>测试</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <style id="demo2"></style>
+    <div id="buttons">
+      <button id="btPause">慢速</button>
+    </div>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+        background: #ffe600;
+      }
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      button,
+      button::after {
+        transition: all 0.3s;
+      }
+      button {
+        cursor: pointer;
+        background: none;
+        border: 3px solid #fff;
+        border-radius: 5px;
+        color: red;
+        display: block;
+        font-size: 1.6em;
+        font-weight: bold;
+        margin: 1em auto;
+        padding: 2em 6em;
+        position: relative;
+        text-transform: uppercase;
+      }
+      button::before,
+      button::after {
+        background: #fff;
+        content: "";
+        position: absolute;
+        z-index: -1;
+      }
+      button:hover {
+        color: black;
+      }
+      #buttons {
+        background: none;
+        position: fixed;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        left: 50%;
+        margin-left: -50px;
+        top: 20px;
+      }
+
+      #btPause::after,
+      #btPause::before {
+        height: 100%;
+        left: 0;
+        top: 0;
+        width: 0;
+      }
+
+      #btPause:hover:after {
+        width: 100%;
+      }
+
+      #buttons > button {
+        margin-bottom: 5px;
+        padding: 8px 16px;
+      }
+
+      #html {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50vh;
+        background: #ffe600;
+      }
+      #demo2 {
+        display: none;
+      }
+      #demo {
+        position: fixed;
+        height: 50vh;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow-y: auto;
+        z-index: 10;
+      }
+      #demo::-webkit-scrollbar {
+        display: none;
+      }
+      @keyframes waves {
+        0% {
+          transform: rotate(0deg);
+        }
+        33% {
+          transform: rotate(-7deg);
+        }
+        66% {
+          transform: rotate(7deg);
+        }
+        100% {
+          transform: rotate(0deg);
+        }
+      }
+      .nose:hover {
+        animation: waves 100ms infinite;
+      }
+    </style>
+
+    <div id="html">
+      <div class="skin">
+        <div class="eye left"></div>
+        <div class="eye right"></div>
+        <div class="nose">
+          <div class="san"><div class="circle"></div></div>
+        </div>
+        <div class="mouth">
+          <div class="up">
+            <div class="lip left"></div>
+            <div class="lip right"></div>
+          </div>
+          <div class="down">
+            <div class="circle2">
+              <div class="circle3"></div>
+            </div>
+          </div>
+        </div>
+        <div class="face left"></div>
+        <div class="face right"></div>
+      </div>
+    </div>
+
+    <script src="test.js"></script>
+  </body>
+</html>
