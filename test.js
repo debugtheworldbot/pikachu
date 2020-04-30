@@ -1,4 +1,5 @@
 const string = `
+/*开始画个皮卡丘，点击按钮控制速度*/
       .skin * {box-sizing: border-box;
 margin: 0px;
         padding: 0px;
@@ -12,6 +13,8 @@ margin: 0px;
         background: #ffe600;
         bottom: 50%;
       }
+/*先画鼻子*/
+
 .nose {
   position: relative;
   left: 50%;
@@ -19,28 +22,20 @@ margin: 0px;
   width: 50px;
   margin-left: -25px;
 }
-.san {
-  border: 10px solid red;
-  width: 0;
-  height: 0;
-  position: absolute;
-  left: 50%;
-  margin-left: -10px;
+  .san {
+        border: 10px solid red;
+        width: 0;
+        height: 0;
+        position: absolute;
+        left: 50%;
+        margin-left: -10px;
+        border-color: black transparent black transparent;
+        border-bottom: none;
+      }
 
-  border-color: black transparent black transparent;
-  border-bottom: none;
-}
-.circle {
-  position: absolute;
-  background: black;
-  width: 20px;
-  height: 8px;
-  bottom: 10px;
-  margin-left: -10px;
-  border-radius: 80% 80% 0 0;
-}
+/*再画眼睛*/
 .eye {
-  position: absolute;
+  
   border: 2px solid black;
   width: 64px;
   height: 64px;
@@ -49,6 +44,7 @@ margin: 0px;
   margin-left: -32px;
   background: #2e2e2e;
   border-radius: 50%;
+  position: absolute;
 }
 .eye::before {
   content: "";
@@ -67,6 +63,7 @@ margin: 0px;
 .eye.right {
   transform: translateX(100px);
 }
+/*嘴巴*/
 .mouth {
   width: 200px;
   height: 200px;
@@ -130,6 +127,7 @@ margin: 0px;
   height: 160px;
   border-radius: 50%;
 }
+/*脸颊*/
 .face {
   border: 3px solid black;
   width: 88px;
@@ -151,7 +149,7 @@ margin: 0px;
   position: absolute;
   margin-left: -208px;
 }
-
+/* 摸摸它的鼻子~ */
  `;
 let n = 1;
 demo2.innerHTML = string.substr(0, n);

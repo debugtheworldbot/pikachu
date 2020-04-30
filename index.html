@@ -86,6 +86,21 @@
         height: 50vh;
         background: #ffe600;
       }
+      @media (max-width: 500px) {
+        #html {
+          height: 43vh;
+        }
+        .face.right {
+          margin-left: 96px;
+        }
+        .face.left {
+          margin-left: -185px;
+        }
+        button {
+          top: 300px;
+          left: 100px;
+        }
+      }
       #demo2 {
         display: none;
       }
@@ -99,7 +114,15 @@
         z-index: 10;
       }
       #demo::-webkit-scrollbar {
-        display: none;
+        width: 10px;
+      }
+      #demo::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background-color: #ffe600;
+      }
+      ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: white;
       }
       @keyframes waves {
         0% {
@@ -117,6 +140,16 @@
       }
       .nose:hover {
         animation: waves 100ms infinite;
+      }
+
+      .circle {
+        position: absolute;
+        background: black;
+        width: 20px;
+        height: 8px;
+        bottom: 10px;
+        margin-left: -10px;
+        border-radius: 80% 80% 0 0;
       }
     </style>
 
